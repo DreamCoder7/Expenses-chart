@@ -1,0 +1,89 @@
+.ChartMain {
+  width: 100%;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ChartMainDays {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ChartMainDay {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ChartMainPrice {
+  border-top: 2px solid hsl(27, 66%, 92%);
+  padding-top: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ChartMainHeading {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  color: hsl(25, 47%, 15%);
+}
+
+.ChartMainPrice p {
+  font-size: 14px;
+  font-weight: 500;
+  color: hsl(28, 10%, 65%);
+  line-height: 1.5;
+}
+
+.ChartMainPrice span {
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+}
+
+.ChartMainAmount {
+  background-color: hsl(10, 79%, 65%);
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.ChartMainHiddenAmount {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: #fff;
+  margin-top: 15px;
+  transform: rotateZ(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+
+.ChartMainAmount:hover .ChartMainHiddenAmount {
+  transform: rotateZ(90deg);
+  opacity: 1;
+  visibility: visible;
+}
+
+.ActiveDay {
+  background-color: hsl(186, 34%, 60%);
+}
+
+@media (min-width: 500px) {
+  .ChartMainAmount {
+    width: 40px;
+  }
+}

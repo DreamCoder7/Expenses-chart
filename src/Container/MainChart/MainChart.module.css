@@ -1,0 +1,14 @@
+.MainChart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  margin: 0 50px;
+}
+
+@media (min-width: 400px) {
+  .MainChart {
+    width: 450px;
+  }
+}
